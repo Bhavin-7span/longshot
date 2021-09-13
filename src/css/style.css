@@ -1,0 +1,294 @@
+.menu-item {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: #9E9E9E;
+  border: none;
+  background-color: transparent;
+  border-radius: 4px;
+  padding: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.menu-item svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.menu-item.is-active,
+.menu-item:hover {
+  color: #fff;
+  background-color: #616161;
+}
+
+body {
+  margin: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.keyword-list {
+  margin: -4px;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.keyword-list li span {
+  display: flex;
+  padding: 4px 8px;
+  border: 1px solid #E0E0E0;
+  background-color: #E0E0E0;
+  color:#616161;
+  font-weight:400;
+  border-radius: 30px;
+  font-size: 12px;
+  margin: 4px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.keyword-list li span.is-active {
+  background-color: #4CAF50;
+  border-color:#4CAF50;
+  color: #fff;
+}
+
+.editor.editor--horizontal {
+  flex-direction: row;
+  height: 100vh;
+  max-height: none;
+}
+
+.editor__box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor__sidebar {
+  flex: 0 0 240px;
+  max-width: 240px;
+  padding: 10px;
+  background-color: #EEEEEE;
+  border-left: 2px solid #9E9E9E;
+}
+
+.ProseMirror {
+  height: 100%;
+}
+
+.ProseMirror:focus {
+  outline: none;
+}
+
+.editor p,
+.editor h1,
+.editor h2,
+.editor h3 {
+  margin: 0px;
+}
+
+.editor__header {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  padding: 0.25rem;
+  border-bottom: 2px solid #9E9E9E;
+  background-color:#FAFAFA;
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  max-height: 26rem;
+  color: #9E9E9E;
+  background-color: #fff;
+  border: 2px solid #9E9E9E;
+  border-radius: 0rem;
+}
+
+.editor__content {
+  padding: 1.25rem 1rem;
+  flex: 1 1 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: #ffffff;
+}
+
+.editor__footer {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  border-top: 3px solid #0d0d0d;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0d0d0d;
+  white-space: nowrap;
+  padding: 0.25rem 0.75rem;
+  /* Some information about the status */
+}
+
+.editor__status {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.editor__status::before {
+  content: " ";
+  flex: 0 0 auto;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: rgba(13, 13, 13, 0.5);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.editor__status--connecting::before {
+  background: #616161;
+}
+
+.editor__status--connected::before {
+  background: #b9f18d;
+}
+
+.editor__name button {
+  background: none;
+  border: none;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0d0d0d;
+  border-radius: 0.4rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.editor__name button:hover {
+  color: #fff;
+  background-color: #0d0d0d;
+}
+
+/* Basic editor styles */
+.ProseMirror>*+* {
+  margin-top: 0.75em;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding: 0 1rem;
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3,
+.ProseMirror h4,
+.ProseMirror h5,
+.ProseMirror h6 {
+  line-height: 1.1;
+}
+
+.ProseMirror code {
+  background-color: rgba(97, 97, 97, 0.1);
+  color: #616161;
+}
+
+.ProseMirror pre {
+  background: #0d0d0d;
+  color: #fff;
+  font-family: "JetBrainsMono", monospace;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.ProseMirror pre code {
+  color: inherit;
+  padding: 0;
+  background: none;
+  font-size: 0.8rem;
+}
+
+.ProseMirror mark {
+  background-color: #faf594;
+}
+
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ProseMirror hr {
+  margin: 1rem 0;
+}
+
+.ProseMirror blockquote {
+  padding-left: 1rem;
+  border-left: 2px solid rgba(13, 13, 13, 0.1);
+}
+
+.ProseMirror hr {
+  border: none;
+  border-top: 2px solid rgba(13, 13, 13, 0.1);
+  margin: 2rem 0;
+}
+
+.ProseMirror ul[data-type="taskList"] {
+  list-style: none;
+  padding: 0;
+}
+
+.ProseMirror ul[data-type="taskList"] li {
+  display: flex;
+  align-items: center;
+}
+
+.ProseMirror ul[data-type="taskList"] li>label {
+  flex: 0 0 auto;
+  margin-right: 0.5rem;
+}
+
+.sidebar-title{
+  padding-bottom:10px;
+  color:#333;
+}
+.performance{
+  margin:0px;
+  padding:0px;
+  list-style: none;
+}
+.performance li + li{
+  margin-top:10px;
+}
+.performance label{
+  font-size:14px;
+  font-weight: 500;
+  color: #90A4AE;
+}
+.counter{
+  font-size:24px;
+  color:#4CAF50;
+  font-weight: bold;
+}
+.keywords-box{
+  margin-top:20px;
+}
+.redebility-message{
+  font-size:18px;
+  color:#4CAF50;
+  font-weight: bold;
+}
